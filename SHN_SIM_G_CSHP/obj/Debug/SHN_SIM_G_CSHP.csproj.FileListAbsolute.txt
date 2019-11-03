@@ -1,0 +1,11 @@
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\bin\Debug\SHN_SIM_G_CSHP.exe.config
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\bin\Debug\SHN_SIM_G_CSHP.exe
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\bin\Debug\SHN_SIM_G_CSHP.pdb
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.csprojAssemblyReference.cache
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.Properties.Resources.resources
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.csproj.GenerateResource.cache
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.csproj.CoreCompileInputs.cache
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.exe
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.pdb
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.ProgramInitialization.resources
+C:\Users\Connor\source\repos\SHN_SIM_G_CSHP\SHN_SIM_G_CSHP\obj\Debug\SHN_SIM_G_CSHP.mainDisplay.resources

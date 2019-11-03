@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SHNSim_GUI.mainDisplay" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAAAEAAASAAAIAACACAAQACCBACABAAAAAAQAAQABA=</HashCode>
+      <FileName>mainDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHNSim_GUI.environment" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHNSim_GUI.Program" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHNSim_GUI.ProgramInitialization" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICBAASEBASQBIgABCACAAjMCRkWCAEIAAAAgRAAQABA=</HashCode>
+      <FileName>ProgramInitialization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHNSim_GUI.simulation" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAIAAAABAAABQjAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>simulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHNSim_GUI.Properties.Resources" Collapsed="true">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SHNSim_GUI.Properties.Settings" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

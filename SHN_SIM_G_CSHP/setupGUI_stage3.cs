@@ -17,7 +17,7 @@ namespace SHNSim_GUI
         public void stageThreeInitialization()
         {
             numberOfNodes = nodeList.Count;
-            this.Resize += stageThreeResize;
+            this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width - 100, Screen.PrimaryScreen.WorkingArea.Height - 30);
 
             display_Simulation_S3 = new PictureBox();
             display_Simulation_S3.Location = new Point(15, 15);
@@ -176,45 +176,6 @@ namespace SHNSim_GUI
             btn_RunSimulation.Select();
         }
 
-        void stageThreeResize(object sender, EventArgs e)
-        {
-            display_Simulation_S3.Height = this.Size.Height - 70;
-            display_Simulation_S3.Width = this.Size.Width - 440;
-            display_objectProperties.Height = this.Size.Height - 70;
-            display_objectProperties.Width = 380;
-
-            int height = 0;
-            display_Simulation_S3.Location = new Point(15, 15);
-            display_objectProperties.Location = new Point(this.Size.Width - 410, 15);
-            height += 20;
-            btn_goBack2.Location = new Point(this.Size.Width - 405, height);
-            height += 60;
-            lbl_LengthOfSimulation.Location = new Point(this.Size.Width - 405, height + 3);
-            height += 17;
-            txtbx_LengthOfSimulation.Location = new Point(this.Size.Width - 405, height);
-            height += 25;
-            lbl_NumberOfDesiredSimulations.Location = new Point(this.Size.Width - 405, height + 3);
-            height += 17;
-            txtbx_NumberOfDesiredSimulations.Location = new Point(this.Size.Width - 405, height);
-            height += 25;
-            lbl_FirstSimulationNumber.Location = new Point(this.Size.Width - 405, height + 3);
-            height += 17;
-            txtbx_FirstSimulationNumber.Location = new Point(this.Size.Width - 405, height);
-            height += 25;
-            lbl_SimulationSaveName.Location = new Point(this.Size.Width - 405, height + 3);
-            height += 17;
-            txtbx_SimulationSaveName.Location = new Point(this.Size.Width - 405, height);
-            height += 25;
-            lbl_SHNSimPath.Location = new Point(this.Size.Width - 405, height + 3);
-            height += 17;
-            txtbx_SHNSimPath.Location = new Point(this.Size.Width - 405, height);
-
-            btn_RunSimulation.Location = new Point(this.Size.Width - 405, this.Size.Height - 260);
-
-            display_Simulation_S3.Invalidate();
-
-        }
-
         private void btn_RunSimulation_Click(object sender, EventArgs e)
         {
 
@@ -254,19 +215,19 @@ namespace SHNSim_GUI
                 txtbx_SimulationSaveName.BackColor = SystemColors.Window;
 
             string temp_SHNPathName = txtbx_SHNSimPath.Text;
-            if (temp_SHNPathName.LastIndexOf("SHNSim.exe") != -1 && File.Exists(temp_SHNPathName))
+            if (temp_SHNPathName.LastIndexOf("SHN_Sim") != -1 && File.Exists(temp_SHNPathName))
             {
                 SHNPathName = temp_SHNPathName;
                 txtbx_SHNSimPath.BackColor = SystemColors.Window;
             }
-            else if (File.Exists(temp_SHNPathName + "\\SHNSim.exe"))
+            else if (File.Exists(temp_SHNPathName + "/SHN_Sim"))
             {
-                SHNPathName = temp_SHNPathName + "\\SHNSim.exe";
+                SHNPathName = temp_SHNPathName + "/SHN_Sim";
                 txtbx_SHNSimPath.BackColor = SystemColors.Window;
             }
-            else if (File.Exists("SHNSim.exe"))
+            else if (File.Exists("SHN_Sim"))
             {
-                SHNPathName = "SHNSim.exe";
+                SHNPathName = "SHN_Sim";
                 txtbx_SHNSimPath.BackColor = SystemColors.Window;
             }
             else
@@ -306,12 +267,13 @@ namespace SHNSim_GUI
             arguments += firstSimulationNumber.ToString() + ' ';
             arguments += simulationSaveName + ' ';
 
-
-            ProcessStartInfo shn = new ProcessStartInfo(SHNPathName);
-
-            shn.Arguments = arguments;
-            shn.WindowStyle = ProcessWindowStyle.Maximized;
+            ProcessStartInfo shn = new ProcessStartInfo(SHNPathName)
+            {
+                Arguments = arguments,
+                WindowStyle = ProcessWindowStyle.Maximized
+            };
             Process.Start(shn);
+                    
         }
 
         private void btn_goBack2_Click(object sender, EventArgs e)
@@ -342,8 +304,7 @@ namespace SHNSim_GUI
 
             foreach (Control c in this.Controls)
                 c.Hide();
-
-            this.Resize -= stageThreeResize;
+                
             stageTwoInitialization(true);
         }
 

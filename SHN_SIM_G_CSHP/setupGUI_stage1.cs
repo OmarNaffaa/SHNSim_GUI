@@ -21,8 +21,6 @@ namespace SHNSim_GUI
 
         public void stageOneInitialization(bool comingBack)
         {
-
-            this.Resize += stageOneResize;
             if (!comingBack)
             {
                 nodeList = new List<environment.node>();
@@ -31,8 +29,8 @@ namespace SHNSim_GUI
                 scaledDisplayItems = new List<PointF[]>();
             }
 
-            this.Size = new Size(845, 900);
-            
+            this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width - 100, Screen.PrimaryScreen.WorkingArea.Height - 30);
+
             display_Simulation_S1 = new PictureBox();
             display_Simulation_S1.Location = new Point(15, 15);
 
@@ -100,18 +98,6 @@ namespace SHNSim_GUI
                 selectedSide = 0;
                 updateDisplay();
             }
-        }
-                       
-        private void stageOneResize(object sender, EventArgs e)
-        {
-            display_Simulation_S1.Size = new Size(this.Width - 45, this.Height - 100);
-            btn_prevNode.Location = new Point(15, this.Height - 80);
-            btn_nextNode.Location = new Point(105, this.Height - 80);
-            btn_finishEnvCreate.Location = new Point(this.Width - 105, this.Height - 80);
-            lbl_updateCondition.Location = new Point(195, this.Height - 80);
-            txtbx_nodeCondition.Location = new Point(250, this.Height - 78);
-            btn_updateCondition.Location = new Point(355, this.Height - 80);
-            updateDisplay();
         }
 
         private void createFirstNode()
@@ -436,8 +422,7 @@ namespace SHNSim_GUI
         {
             foreach (Control c in this.Controls)
                 c.Hide();
-
-            this.Resize -= stageOneResize;
+                
             stageTwoInitialization(false);
         }
     }

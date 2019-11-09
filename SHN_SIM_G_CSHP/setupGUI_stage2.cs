@@ -17,7 +17,7 @@ namespace SHNSim_GUI
 
             Color lblColor = Color.FromArgb(0xf0, 0xf0, 0xf0);
             /*****************************************************************************************/
-            this.Resize += stageTwoResize;
+            this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width - 100, Screen.PrimaryScreen.WorkingArea.Height - 30);
 
             display_Simulation_S2 = new PictureBox();
             display_Simulation_S2.Location = new Point(15, 15);
@@ -290,63 +290,6 @@ namespace SHNSim_GUI
             btn_finished.BringToFront();
             btn_finished.Select();
         }
-
-        private void stageTwoResize(object sender, EventArgs e)
-        {
-            display_Simulation_S2.Location = new Point(30, 15);
-            display_Simulation_S2.Height = this.Size.Height - 70;
-            display_Simulation_S2.Width = this.Size.Width - 240;
-
-            display_objectProperties.Location = new Point(this.Size.Width - 200, 15);
-            display_objectProperties.Height = this.Size.Height - 70;
-            display_objectProperties.Width = 170;
-
-
-            int height = 20;
-            btn_goBack.Location = new Point(this.Size.Width - 195, height);
-            height += 60;
-            lbl_BSRegionSide.Location = new Point(this.Size.Width - 195, height);
-            height += 15;
-            lbl_BSRegionSideConstraints.Location = new Point(this.Size.Width - 195, height);
-            height += 17;
-            txtbx_BSRegionSide.Location = new Point(this.Size.Width - 195, height);
-            height += 25;
-            lbl_numAntenna.Location = new Point(this.Size.Width - 195, height);
-            height += 15;
-            lbl_numAntennaConstraints.Location = new Point(this.Size.Width - 195, height);
-            height += 17;
-            txtbx_numAntenna.Location = new Point(this.Size.Width - 195, height);
-            height += 25;
-            lbl_numTranceivers.Location = new Point(this.Size.Width - 195, height);
-            height += 15;
-            lbl_numTranceiversConstraints.Location = new Point(this.Size.Width - 195, height);
-            height += 17;
-            txtbx_numTranceivers.Location = new Point(this.Size.Width - 195, height);
-            height += 25;
-            lbl_distanceTranceivers.Location = new Point(this.Size.Width - 195, height);
-            height += 15;
-            lbl_distanceTranceiversConstraints.Location = new Point(this.Size.Width - 195, height);
-            height += 17;
-            txtbx_distanceTranceivers.Location = new Point(this.Size.Width - 195, height);
-            height += 25;
-            lbl_maxUEDataRate.Location = new Point(this.Size.Width - 195, height);
-            height += 15;
-            lbl_maxUEDataRateConstraints.Location = new Point(this.Size.Width - 195, height);
-            height += 17;
-            txtbx_maxUEDataRate.Location = new Point(this.Size.Width - 195, height);
-            height += 25;
-            lbl_UEperAntenna.Location = new Point(this.Size.Width - 195, height);
-            height += 15;
-            lbl_UEperAntennaCont.Location = new Point(this.Size.Width - 195, height);
-            height += 15;
-            lbl_UEperAntennaConstraints.Location = new Point(this.Size.Width - 195, height);
-            height += 17;
-            txtbx_UEperAntenna.Location = new Point(this.Size.Width - 195, height);
-            height += 145;
-            btn_finished.Location = new Point(this.Size.Width - 195, this.Size.Height - 106);
-
-            display_Simulation_S2.Invalidate();
-        }
         
         private void display_Simulation_S2_Paint(object sender, PaintEventArgs e)
         {
@@ -514,8 +457,7 @@ namespace SHNSim_GUI
 
             foreach (Control c in this.Controls)
                 c.Hide();
-
-            this.Resize -= stageTwoResize;
+                
             stageOneInitialization(true);
         }
 
@@ -523,8 +465,7 @@ namespace SHNSim_GUI
         {
             foreach (Control c in this.Controls)
                 c.Hide();
-
-            this.Resize -= stageTwoResize;
+                
             stageThreeInitialization();
         }
     }
